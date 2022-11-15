@@ -1,0 +1,16 @@
+/// <summary>
+    /// Method counts down and sends message
+    /// </summary>
+    /// <param name="times">how much steps countdown takes</param>
+    /// <param name="timeStep">how many seconds between step</param>
+    /// <param name="endMessage">Message displayed at the end</param>
+    /// <returns></returns>
+    public IEnumerator Countdown(int times, float timeStep, string endMessage)
+    {
+        for (int i = times; i >=0; i--)
+        {
+            Debug.Log(i.ToString());
+            yield return new WaitForSeconds(timeStep);
+        }
+        Debug.Log(endMessage);
+    }
