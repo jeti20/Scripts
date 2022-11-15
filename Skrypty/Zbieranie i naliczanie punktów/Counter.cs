@@ -9,7 +9,7 @@ public class Counter : MonoBehaviour
     void OnTriggerEnter()
     {
         collectSound.Play();
-        ScroingSystem.theScore += 1;
+        ScroingSystem.theScore += 0.5;
         Destroy(gameObject);
     }
 }
